@@ -1,0 +1,1302 @@
+
+
+/*//////////////////////////////////////////////////////////////////
+[ FONT ]*/
+
+@font-face {
+  font-family: Odin-Rounded;
+  src: url('../fonts/Odin-Rounded.otf');
+}
+
+/*//////////////////////////////////////////////////////////////////
+  [ RESTYLE TAG ]*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: Odin-Rounded, sans-serif;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: Odin-Rounded, sans-serif;
+  margin: 0%;
+  padding: 0%;
+  background: -webkit-linear-gradient(-135deg, #6d03f7, #0fdfee);
+}
+
+/*---------------------------------------------*/
+
+a {
+  font-family: Odin-Rounded;
+  font-size: 1em;
+  text-decoration: none;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+}
+
+a:focus {
+  outline: none !important;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #24c8e6;
+}
+
+/*---------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding-bottom: 0.625em;
+}
+
+h2 {
+  font-size: 20px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding-bottom: 0.625em;
+}
+
+p {
+  font-family: Odin-Rounded;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
+}
+
+ul, li {
+  margin: 0px;
+  list-style-type: none;
+}
+
+/*---------------------------------------------*/
+
+input {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+}
+
+/*---------------------------------------------*/
+
+button {
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/*//////////////////////////////////////////////////////////////////
+  [ Utility ]*/
+
+.txt1 {
+  font-family: Odin-Rounded;
+  font-size: 18px;
+  color: #000000;
+}
+
+.txt2 {
+  font-family: Odin-Rounded;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+/*//////////////////////////////////////////////////////////////////
+  [ login ]*/
+
+.mobile {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.background {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: #9053c7;
+  background: -webkit-linear-gradient(-135deg, #6d03f7, #0fdfee);
+}
+
+.background_homepage {
+  width: 100%;
+  /*min-height: 100vh;*/
+  background: #9053c7;
+  background: -webkit-linear-gradient(-135deg, #6d03f7, #0fdfee);
+  overflow: hidden;
+}
+
+.whitebox {
+  width: 60em;
+  background: #fff;
+  border-radius: 0.625em;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5em 8.125em 2.0625em 1.25em;
+  box-shadow: 0.125em 0.375emx #313148;
+}
+
+.logo {
+  width: 50%;
+  height: 50%;
+}
+
+.logo_card, .logo_card_holder {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+}
+
+.logo img {
+  width: 125%;
+  height: 125%;
+}
+
+.login_form {
+  width: 290px;
+  padding-bottom: 15%;
+}
+
+.login_form-title {
+  font-size: 24px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding-bottom: 54px;
+}
+
+.wrap-input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.input {
+  font-family: Odin-Rounded;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px 0 68px;
+}
+
+option {
+  padding-bottom: 10px;
+}
+
+/*//////////////////////////////////////////////////////////////////
+  [ Input Box Blue Flash ]*/
+
+.focus-input {
+  display: block;
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 0px 0px;
+  color: rgba(0, 104, 223, 0.8);
+}
+
+.input:focus+.focus-input {
+  -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+  animation: anim-shadow 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 70px 25px;
+    opacity: 0;
+  }
+}
+
+@keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 70px 25px;
+    opacity: 0;
+  }
+}
+
+.symbol-input {
+  font-size: 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  border-radius: 25px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 35px;
+  pointer-events: none;
+  color: #666666;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.input:focus+.focus-input+.symbol-input {
+  color: #0082b6;
+  padding-left: 28px;
+}
+
+.joinbutton {
+  width: 50%;
+  height: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 5px;
+  border-radius: 25px;
+  background: #05882c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.inline-button {
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 5px;
+  height: 50px;
+  border-radius: 25px;
+  background: #05882c;
+  padding: 0 25px;
+}
+
+.table-button {
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 5px;
+  height: 30px;
+  border-radius: 25px;
+  background: #176e51;
+  padding: 0 25px;
+}
+
+.delete-user-button{
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 5px;
+  height: 30px;
+  border-radius: 25px;
+  background: #af0b26;
+  padding: 0 25px;
+}
+
+/*-------------------User Management Table--------------------------*/
+
+table.sessiontable {
+  border: 0.125em solid #FFFFFF;
+  background-color: #1B3757;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  margin-top: 0.625em;
+  margin-bottom: 5%;
+}
+
+table.sessiontable td, table.sessiontable th {
+  border: 0.0625em solid #AAAAAA;
+  padding: 0.1875em 0.125em;
+}
+
+table.sessiontable tbody td {
+  /*font-size: 13px;*/
+  color: #FFFFFF;
+}
+
+table.sessiontable tr:nth-child(even) {
+  background: #285484;
+}
+
+table.sessiontable thead {
+  background: #162C46;
+}
+
+table.sessiontable thead th {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 0.125em solid #FFFFFF;
+}
+
+table.sessiontable thead th:first-child {
+  border-left: none;
+}
+
+table.sessiontable tfoot td {
+  font-size: 2em;
+}
+
+table.sessiontable tfoot .links {
+  text-align: right;
+}
+
+table.sessiontable tfoot .links a {
+  display: inline-block;
+  background: #FFFFFF;
+  color: #A40808;
+  padding: 0.125em 0.5em;
+  border-radius: 0.3125em;
+}
+
+/*------------------------------------------------------------------
+  [ Button ]*/
+
+.background-form-btn {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.login_form-btn {
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 5px;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background: #0bafcc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+}
+
+.login_form-btn:hover {
+  background: #333333;
+}
+
+.edit_account-btn{
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 5px;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background: #0bafcc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  margin-bottom: 10px;
+}
+
+.edit_account-btn:hover {
+  background: #333333;
+}
+
+.back-btn {
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 5px;
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  background: #0bafcc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  visibility: hidden;
+}
+
+.back-btn:hover {
+  background: #333333;
+}
+
+form {
+  width: 100%;
+}
+
+.buttonset {
+  display: flex;
+  padding-bottom: 10px;
+  flex-direction: row;
+}
+
+.textareainput {
+  font-family: Odin-Rounded;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+  resize: none;
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  border-radius: 25px;
+  padding: 0 30px 0 68px;
+}
+
+.cardimage {
+  margin-right: 10%;
+  margin-left: 5%;
+  block-size: 75%;
+  width: 20%;
+  height: 100%;
+}
+
+.cardheading {
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: left;
+}
+
+/* Guest Form---------------------------------------------*/
+
+.addGuestFormWindow {
+  padding: 1%;
+}
+
+.guestForm {
+  padding: 10%;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #474e5d;
+  padding-top: 1em;
+}
+
+.guestForm-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #888;
+  width: 80%;
+  padding: 10%;
+}
+
+.guestFormExit {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.cancelbtn, .addguestbtn {
+  float: left;
+  width: 50%;
+}
+
+.ResponsiveTable{
+  padding-bottom: 10%;
+}
+
+.responsiveChildcard{
+  visibility: hidden;
+  width: 100%;
+  vertical-align: left;
+  margin-top: 10%;
+  margin-bottom: -5%;
+  padding-bottom: 0%;
+  height: 100%;
+}
+.profilePictureHolder img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.ButtonContainer{
+  position: relative;
+  
+}
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+.DeleteButton{
+  float: right;
+  font-size: 1.2em;
+}
+.SessionForm{
+  width: 10px;
+}
+
+/* --------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [ Responsive ]*/
+
+  @media
+only screen and (max-width: 1500px) {
+  body, html {
+    overflow-y: visible;
+  }
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr { border: 1px solid #ccc; }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 200px;
+    width: 100%;
+  }
+  td:before {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 200px;
+    padding-right: 40px;
+    white-space: nowrap;
+    margin-left: -150px;
+  }
+  .parentcard{
+    height: 80%;
+  }
+}
+
+  @media (min-width: 1201px) {
+    .sessionHeading{
+      font-size: 1.6em;      
+    }
+    .sessionButton{
+      margin-top: 0.75em;
+    }
+    .openbtn{
+      visibility: hidden;
+    }
+    .parentcard{
+      height: 80%;
+    }
+    .grid-container {
+      display: grid;
+    }
+    .main {
+      height: 95%;
+    
+    }
+    .sessionCard{
+      height: 15%;
+    }
+    .main-cards{
+      height: 100%;
+    }
+  
+    
+  }
+
+  @media (max-width: 1200px) {
+    .whitebox {
+      padding: 177px 90px 33px 85px;
+    }
+    .logo {
+      align-content: center;
+      padding-right: 10%;
+    }
+    .login_form {
+      width: 50%;
+    }
+    .card2{
+      visibility: hidden;
+    }
+    .rightSideCards{
+      display: none;
+    }
+    .input{
+      width: 100%;
+    }
+    login_form-btn{
+      width: 100%;
+    }
+    .sessionHeading{
+      font-size: 1.2em;
+    }
+    .sessionButton{
+      margin-top: 0;
+    }
+    .openbtn{
+      visibility: hidden;
+    }
+    .parentcard{
+      height: 80%;
+    }
+  
+    
+  }
+  
+
+@media (max-width: 1062px) {
+  .whitebox {
+    padding: 177px 90px 33px 85px;
+  }
+  .login_form {
+    width: 50%;
+  }
+  .card2{
+    visibility: hidden;
+  }
+  .rightSideCards{
+    display: none;
+  }
+  .input{
+    width: 100%;
+  }
+  login_form-btn{
+    width: 100%;
+  }
+  .sessionHeading{
+    font-size: 1.2em;
+  }
+  .sessionButton{
+    margin-top: 0;
+  }
+  .sidenav{
+    display: none;
+  }
+  .openbtn {
+    visibility: visible;
+  }
+  .rightColumn{
+    display: none;
+  }
+  .responsiveChildcard{
+    visibility: visible;
+  }
+
+  
+
+
+  
+}
+
+@media (max-width: 768px) {
+  .whitebox {
+    padding: 1px 40px 16px 40px
+  }
+  .logo {
+    width: 80%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-right: 10%;
+    padding-left: 20%;
+    display: block;
+
+  }
+  .login_form {
+    width: 100%;
+  }
+  .card2{
+    visibility: hidden;
+  }
+  .rightSideCards{
+    display: none;
+  }
+  .input{
+    width: 100%;
+  }
+  login_form-btn{
+    width: 100%;
+  }
+  .sessionHeading{
+    font-size: 1.2em;
+  }
+  .sessionButton{
+    margin-top: 0;
+  }
+  .sidenav{
+    display: none;
+  }
+  .openbtn {
+    visibility: visible;
+  }
+  .rightColumn{
+    display: none;
+  }
+  .responsiveChildcard{
+    visibility: visible;
+   
+  }
+  .parentcard{
+    height: 100%;
+  }
+  .logintext{
+    display: none;
+  }
+  .back-btn {
+    visibility: visible;
+  }
+  
+
+}
+
+@media (max-width: 576px) {
+  .whitebox {
+    padding: 1px 40px 16px 40px;
+  }
+
+  .input{
+    width: 100%;
+  }
+  login_form-btn{
+    width: 100%;
+  }
+  .sessionHeading{
+    font-size: 1.2em;
+  }
+  .sessionButton{
+    margin-top: 0;
+  }
+  .sidenav{
+    display: none;
+  }
+  .openbtn {
+    visibility: visible;
+  }
+  .rightColumn{
+    display: none;
+  }
+  .responsiveChildcard{
+    visibility: visible;
+  }
+  .parentcard{
+    height: 100%;
+  }
+  .logintext{
+    display: none;
+  }
+  .back-btn {
+    visibility: visible;
+  }
+
+}
+
+/*------------------------------------------------------------------
+  [ Alert validate ]*/
+
+.validate-input {
+  position: relative;
+}
+
+.alert-validate::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: white;
+  border: 1px solid #c80000;
+  border-radius: 13px;
+  padding: 4px 25px 4px 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 8px;
+  pointer-events: none;
+  font-family: Odin-Rounded;
+  color: #c80000;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+  content: "\f06a";
+  font-family: Odin-Rounded;
+  display: block;
+  position: absolute;
+  color: #c80000;
+  font-size: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 13px;
+}
+
+.alert-validate:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+/* The sidebar menu */
+
+.sidenav {
+  height: 100%;
+  width: 12.5%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 0px;
+  grid-area: sidenav;
+  background-color: #1b3757;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 0px;
+}
+
+.sidenav img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.nav_sub_heading {
+  text-align: center;
+  color: white;
+  padding: 3px;
+  font-size: 0.8vw;
+}
+
+/* The navigation menu links */
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.bottom_nav {
+  position: absolute;
+  bottom: 1em;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1b3757;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  position: fixed;
+  
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+  padding-top: 0px;
+  padding-left: 0px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/* Style page content */
+
+.main {
+  grid-area: main;
+
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+/* Solid border */
+
+hr.divider {
+  border-top: 3px solid #bbb;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.right-top {
+  grid-area: right-top;
+}
+
+.right-bottom {
+  grid-area: right-bottom;
+}
+
+/* Simple dashboard grid CSS */
+
+.grid-container {
+  grid-template-columns: 12.5% 1fr;
+  grid-template-rows: 0px 1fr 1%;
+  grid-template-areas: "sidenav header" "sidenav main" "sidenav footer";
+  height: 100%;
+}
+
+.main-cards {
+  margin-top: 1%;
+  display: flex;
+  padding: 2%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  background-color: #ffffff;
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: 25px;
+  box-shadow: 4px 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.leftSideCards, .leftColumn {
+  padding-left: 0%;
+  padding-right: 1%;
+  padding-bottom: 0em;
+  margin-left: 1em;
+  margin-bottom: 0em;
+  width: 100%;
+  height: 100%;
+}
+
+.rightSideCards, .rightColumn {
+  padding-left: 0%;
+  padding-right: 2.5%;
+  padding-bottom: 2em;
+  width: 40%;
+  height: 100%;
+}
+
+.rightColumn {
+  width: 100%;
+  vertical-align: middle;
+  margin-top: 10%;
+  margin-bottom: -5%;
+  padding-bottom: 0%;
+}
+
+.column {
+  height: 100%;
+  margin: 1%;
+}
+
+.card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1em;
+  background-color: #ffffff;
+  -webkit-column-break-inside: avoid;
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: 25px;
+  box-shadow: 4px 4px;
+  width: 100%;
+  height: 51%;
+}
+
+.parentcard {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  -webkit-column-break-inside: avoid;
+  padding: 1em;
+  margin: 1%;
+  margin-top: 2%;
+  box-sizing: border-box;
+  border-radius: 25px;
+  box-shadow: 4px 4px;
+  width: 97%;
+  max-height: 70em;
+}
+
+.profilePictureHolder {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  max-height: 30em;
+}
+
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  font-size: 1em;
+  padding-top: 10%;
+  margin-left: auto;
+  margin-left: auto;
+}
+
+
+.userinfo h1 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 25%;
+  box-sizing: unset;
+}
+
+.userinfo button {
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.profilepicform {
+  padding-bottom: 15px;
+}
+
+.childcard {
+  display: flex;
+  margin-bottom: 24px;
+  width: 80%;
+  height: 12.5%;
+  background-color: #f0ebeb;
+  -webkit-column-break-inside: avoid;
+  box-sizing: border-box;
+  border-radius: 25px;
+  box-shadow: 4px 4px;
+  right: 40% !important;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+  padding: 3%;
+}
+
+.logintext{
+  width: 50%;
+  height: 50%;
+
+}
+
+.sessionCard {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 1%;
+  padding-top: 0%;
+  padding-bottom: 2.5%;
+  padding-left: 1%;
+  padding-right: 1%;
+  background-color: #1B3757;
+  color: white;
+  border-radius: 1em;
+  box-shadow: 0.2em 0.2em;
+  width: 97.5%;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row;
+  border: solid;
+  border-color: #172a41;
+  border-width: 0.05em;
+  font-size: 1em;
+}
+
+.sessionText {
+  color: white;
+  background-color: #437dc0;
+  font-size: 1.1em;
+  padding: 2%;
+  padding-bottom: 10%;
+  padding-top: 5%;
+  margin-top: -5%;
+  height: 100%;
+  width: auto;
+  border-radius: 1em;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+}
+
+.sessionHeading {
+  color: white;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  height: 0.5em;
+}
+
+.sessionButton {
+  color: white;
+  background-color: #2f5d92;
+  font-size: 1em;
+  padding: 2%;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  width: 25%;
+  border-radius: 1em;
+  box-shadow: 0.05em 0.05em 0.05em 0.05em rgb(50, 56, 93);
+  margin-right: 10%;
+  float: right;
+}
+
+.sessionButton:hover {
+  background-color: #4677af;
+  box-shadow: black;
+}
+
+.sessionButton:active {
+  background-color: #4677af;
+  box-shadow: 0.12em 0.12em 0.12em 0.12em black;
+}

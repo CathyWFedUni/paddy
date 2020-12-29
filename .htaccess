@@ -1,0 +1,14 @@
+RewriteEngine On
+
+RewriteRule ^Sessions$ homepage.php
+RewriteRule ^ViewSession$ sessionpage.php
+RewriteRule ^User$ userpage.php
+RewriteRule ^NewSession$ createsession.php
+RewriteRule ^UserManagement$ usermanagement.php
+RewriteRule ^Inbox$ inbox.php
+RewriteRule ^Contact$ contact.php
+RewriteRule ^Login$ loginpage.php
+RewriteRule ^Registration$ registerpage.php
+RewriteRule ^EditDetails$ edituserpage.php
+RewriteRule ^leftBar$ include/sidebar.php
+RewriteRule ^classes$ include/classes.php
